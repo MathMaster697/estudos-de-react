@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes no React</title>
+</head>
+<body>
+    <div id="aplicativo">
+        <!-- É aqui que o código tem que rodar -->
+    </div>
+    <script src="../react/build/react.js"></script>
+    <script src="../react/build/react-dom.js"></script>
+    <script>
+        var Componente = React.createClass({
+        render: function() {
+          return React.DOM.span(null, "Eu sou um componente");
+        }
+      });
+      ReactDOM.render(
+        React.createElement(Componente),
+        document.getElementById("aplicativo")
+      );
+      
+      /* 
+      Relembrando que componentes embutidos, são wrappers (que são  componentes de encapsulamento e componentes de encapsulamento são componentes que encapsulam componentes desconhecidos e fornecem uma estrutura padrão para exibir os componentes filhos.) em torno de elementos comuns do DOM (por exemplo, React.DOM.div(attributes, children)). 
+      */
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá React</title>
+</head>
+<body>
+    <div id="aplicativo">
+        <!-- A aplicação vai rodar aqui -->
+    </div>
+    <script src="../react/build/react.js"></script>
+    <script src="../react/build/react-dom.js"></script>
+    <script>
+      ReactDOM.render(
+        /*
+        // Contraexemplo
+        // isto não funciona 
+        React.DOM.h1(
+          {
+            style: "background: black; color: white; font-family: Verdana",
+          },
+          "Olá mundo!"
+        ),
+
+        Quando se trata do atributo style, não podemos usar uma string como normalmente fariamos em HTML, mas precisamos de um objeto JavaScript em seu lugar. Evitar strings é sempre uma boa ideia para reduzir os riscos de ataques XSS (Cross-site Scripting), portanto essa é uma mudança bem-vinda. 
+  
+        */
+        
+        // Exemplo apropriado 
+        // isto funciona 
+        React.DOM.h1(
+          {
+            style: {
+              background: "purple",
+              color: "white",
+              fontFamily: "Verdana",
+            }
+          },
+          "Olá, mundo!"
+        ),      
+        document.getElementById("aplicativo")
+      );
+    </script>
+</body>
+</html>
