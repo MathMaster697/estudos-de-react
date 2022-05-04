@@ -15,12 +15,12 @@
     <script>
         var Componente = React.createClass({
             render:function(){
-                return React.DOM.span(null, "Eu sou uma dentista e o meu nome é " + this.props.name);
+                return React.DOM.span(null, "Olá, meu nome é " + this.props.name);
             }
         });
         ReactDOM.render(
             React.createElement(Componente,{
-                name: "Thaís :)",
+                name: "Matheus :)",
             }),
             document.getElementById("aplicativo")
         );
